@@ -1,0 +1,744 @@
+{% extends '_base.html' %}
+
+{% load static %}
+{% load mathfilters %}
+
+{% block title %}
+Modox | Home
+{% endblock title %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+{% endblock extra_head %}
+
+{% block content %}
+
+<main class="main">
+    <section class="home section " id="home">
+        <div class="home__container container grid">
+
+            <div class="home__content grid">
+                <div class="home__social">
+                    <a href="https://www.instagram.com/modox_tech/" target="_blank" class="home__social-icon">
+                        <i class="uil uil-instagram-alt"></i>
+                    </a>
+                    <a href="https://www.facebook.com/modox.tech/" target="_blank" class="home__social-icon">
+                        <i class="uil uil-facebook"></i>
+                    </a>
+                </div>
+
+                <div class="home__data">
+                    <h1 class="home__title">
+                        Modox
+                    </h1>
+                    <h3 class="home__subtitle">
+                        Software Production
+                    </h3>
+                    <p class="home__description">
+                        You imagine it, We create it.
+                    </p>
+                </div>
+            </div>
+
+            <div class="home__scroll">
+                <a href="#about" class="home__scroll-button button__flex">
+                    <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                    <span class="home__scroll-name">Scroll down</span>
+                    <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services section" id="services">
+        <h2 class="section__title">Services</h2>
+        <span class="section__subtitle">What We offer</span>
+
+        <div class="services__container">
+            <div class="services__content">
+                <div>
+                    <i class="uil uil-laptop services__icon"></i>
+                    <h3 class="services__title">Websites <br> Development</h3>
+                </div>
+
+                <span class="button__flex button__small button__link services__button">
+                    View more
+                    <i class="ui uil-arrow-right button__icon"></i>
+                </span>
+
+                <div class="services__modal">
+                    <div class="services__modal-content">
+                        <h4 class="services__modal-content">
+                            Websites Development
+                        </h4>
+                        <i class="uil uil-times services__modal-close"></i>
+
+                        <ul class="services__modal-services grid">
+                            {% comment %} Repeat "li" below to add more sentences {% endcomment %}
+                            <li class="services__modal-service">
+                                <i class="uil uil-check-circle services__modal-icon"></i>
+                                <p>Interactive websites.</p>
+                            </li>
+                            <li class="services__modal-service">
+                                <i class="uil uil-check-circle services__modal-icon"></i>
+                                <p>Responsive websites.</p>
+                            </li>
+                            <li class="services__modal-service">
+                                <i class="uil uil-check-circle services__modal-icon"></i>
+                                <p>High quality user interfaces.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services__content">
+                <div>
+                    <i class="uil uil-mobile-android services__icon"></i>
+                    <h3 class="services__title">Mobile Applications <br> Development</h3>
+                </div>
+
+                <span class="button__flex button__small button__link services__button">
+                    View more
+                    <i class="ui uil-arrow-right button__icon"></i>
+                </span>
+
+                <div class="services__modal">
+                    <div class="services__modal-content">
+                        <h4 class="services__modal-content">
+                            Mobile Applications Development
+                        </h4>
+                        <i class="uil uil-times services__modal-close"></i>
+
+                        <ul class="services__modal-services grid">
+                            {% comment %} Repeat "li" below to add more sentences {% endcomment %}
+                            <li class="services__modal-service">
+                                <i class="uil uil-check-circle services__modal-icon"></i>
+                                <p>Android apps.</p>
+                            </li>
+                            <li class="services__modal-service">
+                                <i class="uil uil-check-circle services__modal-icon"></i>
+                                <p>IOS apps.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services__content">
+                <div>
+                    <i class="uil uil-atom services__icon"></i>
+                    <h3 class="services__title">Artificial Intelligence <br> Development</h3>
+                </div>
+
+                <span class="button__flex button__small button__link services__button">
+                    View more
+                    <i class="ui uil-arrow-right button__icon"></i>
+                </span>
+
+                <div class="services__modal">
+                    <div class="services__modal-content">
+                        <h4 class="services__modal-content">
+                            Artificial Intelligence Development
+                        </h4>
+                        <i class="uil uil-times services__modal-close"></i>
+
+                        <ul class="services__modal-services grid">
+                            {% comment %} Repeat "li" below to add more sentences {% endcomment %}
+                            <li class="services__modal-service">
+                                <i class="uil uil-check-circle services__modal-icon"></i>
+                                <p>High accuracy.</p>
+                            </li>
+                            <li class="services__modal-service">
+                                <i class="uil uil-check-circle services__modal-icon"></i>
+                                <p>Text recognition, voice recognition, face detection, and much more.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="services__content">
+                <div>
+                    <i class="uil uil-setting services__icon"></i>
+                    <h3 class="services__title">Graphic <br> Design</h3>
+                </div>
+
+                <span class="button__flex button__small button__link services__button">
+                    View more
+                    <i class="ui uil-arrow-right button__icon"></i>
+                </span>
+
+                <div class="services__modal">
+                    <div class="services__modal-content">
+                        <h4 class="services__modal-content">
+                            Graphic Design
+                        </h4>
+                        <i class="uil uil-times services__modal-close"></i>
+
+                        <ul class="services__modal-services grid">
+                            {% comment %} Repeat "li" below to add more sentences {% endcomment %}
+                            <li class="services__modal-service">
+                                <i class="uil uil-check-circle services__modal-icon"></i>
+                                <p>Interactive UI/UX.</p>
+                            </li>
+                            <li class="services__modal-service">
+                                <i class="uil uil-check-circle services__modal-icon"></i>
+                                <p>Modern Themes/Designs.</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio section" id="portfolio_web">
+        <h2 class="section__title">
+            Web
+        </h2>
+        <span class="section__subtitle">Most Recent Projects</span>
+        <div class="swiper mySwiperWeb">
+            <div class="swiper-wrapper">
+
+                {% for project in projects %}
+
+                {% if project.categories.name == 'web' %}
+
+                <div class="swiper-slide">
+                    <div class="portfolio__card">
+                        {% if project.thumbnail %}
+                        <img src="{{ project.thumbnail }}" alt="{{ project.name }} Thumbnail"
+                            class="portfolio__card-img">
+                        {% endif %}
+                        <div class="portfolio__card-content">
+                            <h3 class="portfolio__card-header">
+                                {{ project.name }}
+                            </h3>
+                            <p class="portfolio__card-text">
+                                {{ project.description|truncatechars:50 }}
+                            </p>
+                            <a href="{{ project.get_absolute_url }}"
+                                class="button button__flex button__small portfolio__button">
+                                View More
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {% endif %}
+
+                {% empty %}
+
+                <h3>There are no projects created yet</h3>
+
+                {% endfor %}
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+
+    <section class="portfolio section" id="portfolio_android">
+        <h2 class="section__title">
+            Android
+        </h2>
+        <span class="section__subtitle">Most Recent Projects</span>
+        <div class="swiper mySwiperAndroid">
+            <div class="swiper-wrapper">
+
+                {% for project in projects %}
+
+                {% if project.categories.name == 'android' %}
+
+                <div class="swiper-slide">
+                    <div class="portfolio__card">
+                        {% if project.thumbnail %}
+                        <img src="{{ project.thumbnail.url }}" alt="{{ project.name }} Thumbnail"
+                            class="portfolio__card-img" >
+                        {% endif %}
+                        <div class="portfolio__card-content">
+                            <h3 class="portfolio__card-header">
+                                {{ project.name }}
+                            </h3>
+                            <p class="portfolio__card-text">
+                                {{ project.description|truncatechars:50 }}
+                            </p>
+                            <a href="{{ project.get_absolute_url }}"
+                                class="button button__flex button__small portfolio__button">
+                                View More
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {% endif %}
+
+                {% empty %}
+
+                <h3>There are no projects created yet</h3>
+
+                {% endfor %}
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+
+    <section class="portfolio section" id="portfolio_ai">
+        <h2 class="section__title">
+            AI
+        </h2>
+        <span class="section__subtitle">Most Recent Projects</span>
+        <div class="swiper mySwiperAi">
+            <div class="swiper-wrapper">
+
+                {% for project in projects %}
+
+                {% if project.categories.name == 'ai' %}
+
+                <div class="swiper-slide">
+                    <div class="portfolio__card">
+                        {% if project.thumbnail %}
+                        <img src="{{ project.thumbnail.url }}" alt="{{ project.name }} Thumbnail"
+                            class="portfolio__card-img">
+                        {% endif %}
+                        <div class="portfolio__card-content">
+                            <h3 class="portfolio__card-header">
+                                {{ project.name }}
+                            </h3>
+                            <p class="portfolio__card-text">
+                                {{ project.description|truncatechars:50 }}
+                            </p>
+                            <a href="{{ project.get_absolute_url }}"
+                                class="button button__flex button__small portfolio__button">
+                                View More
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {% endif %}
+
+                {% empty %}
+
+                <h3>There are no projects created yet</h3>
+
+                {% endfor %}
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+
+    <section class="portfolio section" id="portfolio_financial_ai">
+        <h2 class="section__title">
+            Financial AI
+        </h2>
+        <span class="section__subtitle">Most Recent Projects</span>
+        <div class="swiper mySwiperFinancialAi">
+            <div class="swiper-wrapper">
+
+                {% for project in projects %}
+
+                {% if project.categories.name == 'financial' %}
+
+                <div class="swiper-slide">
+                    <div class="portfolio__card">
+                        {% if project.thumbnail %}
+                        <img src="{{ project.thumbnail.url }}" alt="{{ project.name }} Thumbnail"
+                            class="portfolio__card-img">
+                        {% endif %}
+                        <div class="portfolio__card-content">
+                            <h3 class="portfolio__card-header">
+                                {{ project.name }}
+                            </h3>
+                            <p class="portfolio__card-text">
+                                {{ project.description|truncatechars:50 }}
+                            </p>
+                            <a href="{{ project.get_absolute_url }}"
+                                class="button button__flex button__small portfolio__button">
+                                View More
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {% endif %}
+
+                {% empty %}
+
+                <h3>There are no projects created yet</h3>
+
+                {% endfor %}
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+    
+    <section class="portfolio section" id="portfolio_graphic">
+        <h2 class="section__title">
+            Graphic Design
+        </h2>
+        <span class="section__subtitle">Most Recent Projects</span>
+        <div class="swiper mySwiperGraphic">
+            <div class="swiper-wrapper">
+
+                {% for project in projects %}
+
+                {% if project.categories.name == 'graphic' %}
+
+                <div class="swiper-slide">
+                    <div class="portfolio__card">
+                        {% if project.thumbnail %}
+                        <img src="{{ project.thumbnail.url }}" alt="{{ project.name }} Thumbnail"
+                            class="portfolio__card-img">
+                        {% endif %}
+                        <div class="portfolio__card-content">
+                            <h3 class="portfolio__card-header">
+                                {{ project.name }}
+                            </h3>
+                            <p class="portfolio__card-text">
+                                {{ project.description|truncatechars:50 }}
+                            </p>
+                            <a href="{{ project.get_absolute_url }}"
+                                class="button button__flex button__small portfolio__button">
+                                View More
+                                <i class="uil uil-arrow-right button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {% endif %}
+
+                {% empty %}
+
+                <h3>There are no projects created yet</h3>
+
+                {% endfor %}
+
+            </div>
+
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </section>
+
+    <section class="project section">
+        <div class="project__bg">
+            <div class="project__container container grid">
+                <div class="project__data">
+                    <h2 class="project__title">
+                        You have a new project?
+                    </h2>
+                    <p class="project__description">
+                        Contact us now and get 50% discount for your first project!
+                    </p>
+                    <a href="#contact" class="button button__flex contact__btn">
+                        Contact Us
+                        <i class="uil uil-message button__icon contact__btn-icon"></i>
+                    </a>
+                </div>
+
+                <img src="{% static 'images/contact.png' %}"
+                    alt="Project Promotion" class="project__img">
+            </div>
+        </div>
+    </section>
+
+    <section class="about section" id="about">
+        <h2 class="section__title">About Us</h2>
+        <span class="section__subtitle">Our Introduction</span>
+
+        <div class="about__container container grid">
+            <div class="about__data">
+                <p class="about__description">
+                    We are a software company that provides reliable, scalable, and high-quality software applications, built by highly qualified engineers.
+                </p>
+            </div>
+            <div class="about__info">
+                <div>
+                    <span class="about__info-title">
+                        Founded
+                    </span>
+                    <span class="about__info-name">
+                        2016
+                    </span>
+                </div>
+
+                <div>
+                    <span class="about__info-title">
+                         Projects
+                    </span>
+                    <span class="about__info-name">
+                        +50
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="contact section" id="contact">
+        <h2 class="section__title">Contact US</h2>
+        <span class="section__subtitle">
+            Get In Touch
+        </span>
+
+        <div class="contact__container container grid">
+            <div>
+                <div class="contact__information">
+                    <i class="uil uil-phone contact__icon"></i>
+                    <div>
+                        <h3 class="contact__title">Call US</h3>
+                        <span class="contact__subtitle">
+                            +963 935 975 476
+                        </span>
+                    </div>
+                </div>
+
+                <div class="contact__information">
+                    <i class="uil uil-envelope contact__icon"></i>
+                    <div>
+                        <h3 class="contact__title">Email</h3>
+                        <span class="contact__subtitle">
+                            modox.tech@gmail.com
+                        </span>
+                    </div>
+                </div>
+
+                <div class="contact__information">
+                    <i class="uil uil-map-marker contact__icon"></i>
+                    <div>
+                        <h3 class="contact__title">Location</h3>
+                        <span class="contact__subtitle">
+                                Internationl
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <form method="post" class="contact__form grid">
+
+                {% csrf_token %}
+
+                <div class="contact__inputs grid">
+                    <div class="contact__content">
+                        <label for="name" class="contact__label">Name</label>
+                        <input type="text" name="name" class="contact__input">
+                    </div>
+                    <div class="contact__content">
+                        <label for="email" class="contact__label">Email</label>
+                        <input type="email" name="email" class="contact__input">
+                    </div>
+                </div>
+                <div class="contact__content">
+                    <label for="message" class="contact__label">Message</label>
+                    <textarea name="message" cols="0" rows="7" class="contact__input"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="button button__flex contact__btn">
+                        Send Message
+                        <i class="uil uil-message button__icon contact__btn-icon"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__bg">
+        <div class="footer__container container grid">
+            <div>
+                <h1 class="footer__title">
+                    Modox
+                </h1>
+                <span class="footer__subtitle">
+                    Everything is possible
+                </span>
+            </div>
+
+            <ul class="footer__links">
+                <li>
+                    <a href="#services" class="footer__link">
+                        Services
+                    </a>
+                </li>
+                <li>
+                    <a href="#portfolio" class="footer__link">
+                        Portfolio
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact" class="footer__link">
+                        Contact Us
+                    </a>
+                </li>
+            </ul>
+
+            <div class="footer__socials">
+                <a href="https://www.facebook.com/modox.tech/" target="_blank" class="footer__social">
+                    <i class="uil uil-facebook-f"></i>
+                </a>
+
+                <a href="https://www.instagram.com/modox_tech/" target="_blank" class="footer__social">
+                    <i class="uil uil-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="scrollup" id="scroll-top">
+    <i class="uil uil-arrow-up scrollup__icon"></i>
+</a>
+
+{% endblock content %}
+
+{% block scripts %}
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper(".mySwiperWeb", {
+        effect: "coverflow",
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        initialSlide: {{web}} % 2 == 0 ? {{web}} / 2 : Math.ceil({{ web }} / 2) - 1,
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    var swiper = new Swiper(".mySwiperAndroid", {
+        effect: "coverflow",
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        initialSlide: {{android}} % 2 == 0 ? {{android}} / 2 : Math.ceil({{ android }} / 2) - 1,
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    var swiper = new Swiper(".mySwiperAi", {
+        effect: "coverflow",
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        initialSlide: {{ai}} % 2 == 0 ? {{ai}} / 2 : Math.ceil({{ ai }} / 2) - 1,
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    var swiper = new Swiper(".mySwiperFinancialAi", {
+        effect: "coverflow",
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        initialSlide: {{financial_ai}} % 2 == 0 ? {{financial_ai}} / 2 : Math.ceil({{ financial_ai }} / 2) - 1,
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    var swiper = new Swiper(".mySwiperGraphic", {
+        effect: "coverflow",
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        initialSlide: {{graphic}} % 2 == 0 ? {{graphic}} / 2 : Math.ceil({{ graphic }} / 2) - 1,
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+{% endblock scripts %}

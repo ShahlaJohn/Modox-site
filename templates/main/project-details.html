@@ -1,0 +1,80 @@
+{% extends '_base.html' %}
+
+{% block title %}
+Modox | {{ project.name }}
+{% endblock title %}
+
+{% block content %}
+
+<main class="main">
+    <section class="project__details">
+        <h2 class="section__title">
+            {{ project.name }} Details
+        </h2>
+        <br />
+        <br />
+
+        <div class="details__container container grid">
+            <div class="details__content grid">
+                <div>
+                    <img src="{{project.thumbnail}}" alt="thumb">
+                </div>
+                <div>
+                    <h3 class="details__title">Description: </h3>
+                    <span class="details__text">
+                        {{ project.description }}
+                    </span>
+                </div>
+
+                <div>
+                    <h3 class="details__title">Created: </h3>
+                    <span class="details__text">
+                        {{ project.created.date }}
+                    </span>
+                </div>
+
+                {% if project.tags.all %}
+                <div>
+                    <h3 class="details__title">Tags: </h3>
+
+
+                    <div class="details__text-categories">
+                        {% for tag in project.tags.all %}
+                            <div>
+                                {{ tag }}
+                                {% if not forloop.last %},{% endif %}
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                </div>
+                {% endif %}
+
+                {% if project.website_url %}
+                <div>
+                    {% if 'github' in project.website_url or 'gitlab' in project.website_url %}
+                    <a href="{{ project.website_url }}" class="button button__flex details__button" target="_blank">
+                        View Code
+                        <i class="uil uil-arrow-right button__icon details__button-icon"></i>
+                    </a>
+
+                    {% else %}
+
+                    <a href="{{ project.website_url }}" class="button button__flex details__button" target="_blank">
+                        Visit Website
+                        <i class="uil uil-arrow-right button__icon details__button-icon"></i>
+                    </a>
+                    {% endif %}
+                </div>    
+                {% endif %}
+                
+                <br>
+                <br>
+                <br>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+{% endblock content %}
